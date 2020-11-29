@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat App</title>
+    <script defer src="http://localhost:3000/socket.io/socket.io.js"></script>
+    <script defer src="script.js"></script>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #f8f8f8;
+            font-family: 'roboto', 'Sans-serif';
+        }
+
+        section.chat__section {
+            width: 800px;
+            max-width: 90%;
+            background: #fff;
+            box-shadow: 0 10px 15px -3px;
+
+        }
+
+        #message-container {
+
+            color: rgb(19, 8, 8);
+            margin-left: 10px;
+            height: 500px;
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto;
+            padding-top: 40px;
+            /* width: 80%;
+        max-width: 120px; */
+        }
+
+        #message-container div {
+            background-color: rgb(252, 239, 170);
+            padding: 5px;
+            
+
+
+        }
+
+        #message-container div :nth-child(2n) {
+            background-color: rgb(245, 245, 245);
+        }
+
+        textarea {
+            width: 80%;
+            border: none;
+            padding: 20px;
+            font-size: 15px;
+            outline: none;
+            background: #fbfbfb;
+        }
+
+        button {
+            background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+  float: right;
+  margin-bottom: 30px;
+
+
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <section class="chat__section">
+        <div id="message-container"></div>
+        <form action="" id="send-container">
+            <textarea id="message-input" cols="30" rows="1" placeholder="Write a message"></textarea>
+            <button type="submit" id="send-button">SEND</button>
+
+            <section class="btn">
+           
+        </section>
+        </form>
+    </section>
+
+
+
+</body>
+
+</html>
